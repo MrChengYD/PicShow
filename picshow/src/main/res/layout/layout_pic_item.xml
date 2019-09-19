@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/pic_show_item_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/icon_close_margin">
+        <View
+            android:id="@+id/pic_show_item_close"
+            android:layout_width="@dimen/icon_close_size"
+            android:layout_height="@dimen/icon_close_size"
+            android:background="@drawable/icon_close"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</RelativeLayout>

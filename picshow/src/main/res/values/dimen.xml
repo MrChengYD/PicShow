@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="icon_close_size">45dp</dimen>
+    <dimen name="icon_close_margin">20dp</dimen>
+</resources>
