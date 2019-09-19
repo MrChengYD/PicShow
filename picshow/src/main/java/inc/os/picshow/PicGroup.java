@@ -3,6 +3,7 @@ package inc.os.picshow;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
@@ -89,7 +90,7 @@ import java.util.List;
  * **/
 public class PicGroup extends LinearLayout implements PicItem.OnPicShowItemPic ,PicItem.OnPicShowItemClose{
     private Context context;
-
+    private Handler handler = new Handler();
     private View pic_group_view;
     private boolean fold;
     private boolean enableClose;
@@ -166,7 +167,8 @@ public class PicGroup extends LinearLayout implements PicItem.OnPicShowItemPic ,
             throw new RuntimeException("请先设置图片资源路径!");
         }else{
             //根据传入的数据 加载不同的布局
-            new Thread(this::initAndShow);
+            new Thread(() -> handler.post(this::initAndShow)).start();
+            //initAndShow();
         }
     }
 
